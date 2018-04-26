@@ -1,0 +1,32 @@
+{
+  "presets": [
+    [
+      "es2015",
+      {
+        "loost": true,
+        "modules": false
+      }
+    ],
+    "next/babel"
+  ],
+  "plugins": [
+    [
+      "inline-import",
+      {
+        "extensions": [
+          ".css",
+          ".js"
+        ],
+        "optimizeForSpeed": true
+      }
+    ],
+    [
+      "styled-components",
+      {
+        "ssr": true,
+        "displayName": true,
+        "preprocess": false
+      }
+    ]
+  ]
+}
