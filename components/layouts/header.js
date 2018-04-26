@@ -11,6 +11,7 @@ const NavList = styled.li`
 const NavLink = styled.a`
   display: inline-block;
   padding: 8px 15px;
+  cursor: pointer;
 `;
 
 const NavItem = props => (

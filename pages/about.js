@@ -1,5 +1,9 @@
+import Layout from '../components/layouts/index';
+
 const About = () => (
-  <h1>ABOUT</h1>
+  <Layout>
+    <h1>ABOUT</h1>
+  </Layout>
 )
 
 export default About;

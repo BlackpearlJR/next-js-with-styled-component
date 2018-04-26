@@ -1,5 +1,9 @@
+import Layout from '../components/layouts/index';
+
 const Contact = () => (
-  <h1>CONTACT</h1>
+  <Layout>
+    <h1>CONTACT</h1>
+  </Layout>
 )
 
 export default Contact;
