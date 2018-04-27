@@ -27,6 +27,7 @@ const Header = () => (
     <NavItem title="HOME" href="/" />
     <NavItem title="ABOUT" href="/about" />
     <NavItem title="CONTACT" href="/contact" />
+    <NavItem title="BLOG" href="/blog" />
   </Nav>
 )
 
