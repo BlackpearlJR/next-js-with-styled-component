@@ -8,6 +8,18 @@ injectGlobal`
     outline: 0 !important;
   }
 
+  * {
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  *:before,
+  *:after {
+    -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+
   hr {
     box-sizing: content-box;
     height: 0;

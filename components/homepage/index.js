@@ -24,7 +24,7 @@ class Index extends Component {
     console.log('props', this.props);
     return (
       <Layout>
-        <h1>Sawatdee { this.props.users.name  && this.props.users.name } Next.js</h1>
+        <h1>Sawatdee { this.props.users.name  && this.props.users.name }</h1>
 
         <input type="text" onChange={e => this.setName(e)} />
         <button type="button" onClick={() => this.setUser()}>SET USER</button>

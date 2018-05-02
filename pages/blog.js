@@ -2,6 +2,7 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Layout from '../components/layouts/index';
 
+import '../styles.scss';
 
 const PostLink = props => (
   <li>
@@ -12,10 +13,11 @@ const PostLink = props => (
 );
 
 const Blog = props => {
-  console.log('blog props', props.items)
+  console.log('blog props', props)
   return (
     <Layout>
-      <h1>Blog</h1>
+      <h1 className="example">Blog</h1>
+      <img src="/static/logo.png" alt="ae"/>
       { props && props.items.map((item, index) => (
         <PostLink key={index} id={item.show.id} name={item.show.name} />
       )) }

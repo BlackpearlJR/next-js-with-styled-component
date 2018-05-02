@@ -1,39 +1,28 @@
 const path = require('path')
 const glob = require('glob')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+// const withImages = require('next-images')
+// module.exports = withImages()
+const withSass = require('@zeit/next-sass')
+module.exports = withSass()
 
 module.exports = {
 	distDir: '.build',
   webpack: (config) => {
     config.module.rules.push(
       {
-        test: /\.(css|scss)$/,
+        test: /\.(css|scss)/,
         loader: 'emit-file-loader',
         options: {
-					name: path.join('dist', '[path][name].[ext]')
+          name: 'dist/[path][name].[ext]'
         }
       },
       {
-        test: /\.(css|sass|scss)$/,
-        use: ExtractTextPlugin.extract([
-					{
-						loader: 'css-loader',
-						options: {
-							sourceMap: false,
-              minimize: true
-						}
-					},
-					'postcss-loader',
-          {
-						loader: 'sass-loader',
-            options: {
-              includePaths: ['styles', 'node_modules']
-                .map((d) => path.join(__dirname, d))
-                .map((g) => glob.sync(g))
-                .reduce((a, c) => a.concat(c), [])
-            }
-          },
-        ])
+        test: /\.css$/,
+        use: ['babel-loader', 'postcss-loader']
+      },
+      { test: /\.scss$/,
+        loaders: [ 'style-loader', 'css-loader', 'sass-loader']
       },
 			{
 				test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
