@@ -1,0 +1,9 @@
+// @import '~/bootstrap/dist/css/bootstrap.min.css';
+$font-size: 90px;
+body{
+  background-color: #ddd;
+}
+.example {
+  font-size: $font-size;
+  color: #ff9900;
+}

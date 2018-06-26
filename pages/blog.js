@@ -2,7 +2,7 @@ import Link from 'next/link';
 import fetch from 'isomorphic-unfetch';
 import Layout from '../components/layouts/index';
 
-import '../styles.scss';
+// import '../styles.scss';
 
 const PostLink = props => (
   <li>

@@ -1,6 +1,7 @@
 import Header from './header';
 
-import '../../style/style';
+// import '../../style/style';
+// import '../../styles/style.scss';
 
 
 const Layout = props => (
